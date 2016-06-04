@@ -1,14 +1,62 @@
+var USER_DATA = {
+  name: 'Ryan Burbank',
+  username: 'ryanhburbank',
+  image: 'https://avatars2.githubusercontent.com/u/3589036?v=3&s=140'
+};
+
 var React = require('react');
 var ReactDOM = require('react-dom');
 
-var HelloWorld = React.createClass({
+/* (ensure that every component you build meets the following criteria)
+  Focused
+  Independent
+  Reusable
+  Small
+  Testable
+*/
+
+var ProfilePic = React.createClass({
+  render: function() {
+    return (
+      <img src={this.props.imageUrl} style={{height: 100, width: 100}} />
+    )
+  }
+});
+
+var ProfileLink = React.createClass({
   render: function() {
     return (
       <div>
-        Hello World!
+        <a href={'https://www.github.com/' + this.props.username}>
+          {this.props.username}
+        </a>
       </div>
     )
   }
 });
 
-ReactDOM.render(<HelloWorld />, document.getElementById('app'));
+var ProfileName = React.createClass({
+  render: function() {
+    return (
+      <div>{this.props.name}</div>
+    )
+  }
+});
+
+var Avatar = React.createClass({
+  render: function() {
+    return (
+      <div>
+        <ProfilePic imageUrl={this.props.user.image} />
+        <ProfileName name={this.props.user.name} />
+        <ProfileLink username={this.props.user.username} />
+      </div>
+    )
+  }
+});
+
+
+ReactDOM.render(
+  <Avatar user={USER_DATA} />,
+  document.getElementById('app')
+);
