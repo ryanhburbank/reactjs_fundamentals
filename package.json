@@ -4,7 +4,8 @@
   "description": "react-js utilizing webpack and babel",
   "main": "dist/index.html",
   "scripts": {
-    "test": "ava 'app/**/*.test.js' --verbose --require ./other/setup-ava-tests.js"
+    "production": "webpack -p",
+    "start": "webpack-dev-server"
   },
   "author": "Ryan H Burbank",
   "license": "ISC",
@@ -13,11 +14,11 @@
     "react-dom": "^15.1.0"
   },
   "devDependencies": {
-    "ava": "^0.15.1",
     "babel-core": "^6.9.1",
     "babel-loader": "^6.2.4",
     "babel-preset-react": "^6.5.0",
     "html-webpack-plugin": "^2.19.0",
-    "webpack": "^1.13.1"
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
   }
 }
