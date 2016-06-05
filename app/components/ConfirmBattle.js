@@ -1,10 +1,12 @@
 var React = require('react');
 var PropTypes = React.PropTypes;
-var styles = require('../styles');
 var Link = require('react-router').Link;
-var UserDetails = require('../components/UserDetails');
-var UserDetailsWrapper = require('../components/UserDetailsWrapper');
-var MainContainer = require('../components/MainContainer');
+var styles = require('../styles');
+
+var UserDetails = require('./UserDetails');
+var UserDetailsWrapper = require('./UserDetailsWrapper');
+var MainContainer = require('./MainContainer');
+var Loading = require('./Loading');
 
 // good way to check props
 // function puke (object) {
@@ -14,7 +16,7 @@ var MainContainer = require('../components/MainContainer');
 function ConfirmBattle (props) {
     return (
       props.isLoading === true
-      ? <p> LOADING... </p>
+      ? <Loading />
       : <MainContainer>
           <h1>Confirm Players</h1>
           <div className="col-sm-8 col-sm-offset-2">

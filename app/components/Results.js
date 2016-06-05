@@ -1,10 +1,12 @@
 var React = require('react');
 var PropTypes = React.PropTypes;
-var styles = require('../styles');
-var UserDetails = require('../components/UserDetails');
-var UserDetailsWrapper = require('../components/UserDetailsWrapper');
 var Link = require('react-router').Link;
-var MainContainer = require('../components/MainContainer');
+var styles = require('../styles');
+
+var UserDetails = require('./UserDetails');
+var UserDetailsWrapper = require('./UserDetailsWrapper');
+var MainContainer = require('./MainContainer');
+var Loading = require('./Loading');
 
 function getWinningIndex(scores) {
   return (scores[0] > scores[1] ? 0 : 1);
@@ -33,7 +35,7 @@ function StartOver () {
 function Results (props) {
   if (props.isLoading) {
     return (
-      <p>Loading...</p>
+      <Loading />
     )
   }
 
