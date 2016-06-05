@@ -2,8 +2,9 @@ This is my implementatin of Github Battle,
 based on lessons from the ReactJS fundamentals course
 taught by Tyler Mcginnis
 
-* ['React.js Course'](http://www.reactjsprogram.com/)
-* ['React.js Fundamentals Github Repo'](https://github.com/ReactjsProgram/React-Fundamentals)
+__Resources__:
+* [React.js Course](http://www.reactjsprogram.com/)
+* [React.js Fundamentals Github Repo](https://github.com/ReactjsProgram/React-Fundamentals)
 
 __To Use__:
 - 1. Clone repo
